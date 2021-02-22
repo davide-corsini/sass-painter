@@ -1,3 +1,4 @@
+// container
 @mixin cont {
         .container{
         max-width: 85%;
@@ -5,7 +6,7 @@
     }
 }
 
-
+//flex
 @mixin flex($just:flex-start, $align:center) {
     display: flex;
     justify-content: $just;
@@ -19,16 +20,8 @@
     align-items: $align;
 }
 
-@mixin btn($pd, $bcg, $color, $font){
-    @include flex-c;
-    border: 0;
-    background-color: $bcg;
-    font-size: $font;
-    padding: $pd;
-    color: $color;
-    text-transform: uppercase;
-}
 
+//img for bcg-img
 @mixin center-img {
     background-position: center;
     background-size: cover;
