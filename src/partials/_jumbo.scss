@@ -4,19 +4,30 @@
     background-image: url('../img/bg-painter-home.jpg');
     background-size: cover;
     object-fit: cover;
-    // debug
+    
     .container{
         height: 100%;
         @include flex-c(center, flex-start);
         & .title-jumbo{
-            width: 40%;
+            width: 48%;
+            height: 70%;
+            font-size: 21px;
+            @include flex-c(space-around, flex-start);
             & img{
                 width: 80%;
             }
             & .btns{
                 @include flex(space-between);
                 background-color: orange;
-                max-width: 60%;
+                width: 50%;
+            }
+            & div.purple{
+                line-height: 1.5;
+                font-size: 16px;
+                color: $purple;
+                & p{
+                    font-style: oblique;
+                }
             }
         }
     }

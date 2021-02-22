@@ -28,3 +28,8 @@
     color: $color;
     text-transform: uppercase;
 }
+
+@mixin center-img {
+    background-position: center;
+    background-size: cover;
+}

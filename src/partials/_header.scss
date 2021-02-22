@@ -23,6 +23,10 @@ header{
                 & a{
                     color: $grey;
                 }
+                &:hover a{
+                    text-decoration: underline;
+                    color: white;
+                }
             }
         }
     }
@@ -30,15 +34,9 @@ header{
     .nav-bar{
         width: 100%;
         height: calc(#{$height_header} - 35px);
-        // debug
-        // debug
         @include flex(flex-start, center);
-
-        //debug
-        //debug
         & .logo{
             width: 10%;
-            // debug
             padding-bottom: 1%;
         }
         & ul.menu-nav{
@@ -68,21 +66,57 @@ header{
                 position: relative;
                 & i{
                     color: $grey;
+                    margin-left: 8px;
                 }
                 & ul.with-dropdown{
                     @include flex-c(flex-start, flex-start);
-                    padding: 10px;
                     width: 200px;
+                    // debug
+                    padding: 5%;
+                    //debug
                     position: absolute;
-                    background-color: red;
+                    background-color: #ffffff;
                     top: 55px;
                     left: 0;
                     display: none;
                     & li{
-                        @include flex(flex-start);
+                        @include flex(space-between);
                         width: 100%;
                         padding: 10px 0;
+                        position: relative;
+                        &::after{
+                            font-family: "Font Awesome 5 Free"; 
+                            font-weight: 900; 
+                            content: "\f0da";
+                            color: $grey;
+                        }
+                        &:hover{
+                            background-color: $bcg_main;
+                            &::after{
+                            font-family: "Font Awesome 5 Free"; 
+                            font-weight: 900; 
+                            content: "\f0da";
+                            color: $black;
+                            }
+                        }
+                        & ul.sub-drop{
+                            padding: 5%;
+                            position: absolute;
+                            width: 300px;
+                            left: 200px;
+                            top: 0;
+                            background-color: #ffffff;
+                            display: none;
 
+                        }
+                        &:hover ul.sub-drop{
+                            display: block;
+                            & li h3{
+                                display: inline-block;
+                                text-align: center;
+                                text-transform: uppercase;
+                            }
+                        }
                     }
                 }
 
@@ -96,7 +130,6 @@ header{
     }
 }
 
-    // debug
 
 
     
