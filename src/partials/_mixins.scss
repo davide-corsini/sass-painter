@@ -20,7 +20,7 @@
 }
 
 @mixin btn($pd, $bcg, $color, $font){
-    @include flex(center, center);
+    @include flex-c;
     border: 0;
     background-color: $bcg;
     font-size: $font;

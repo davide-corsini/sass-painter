@@ -12,7 +12,7 @@ header{
         width: 100%;
         height: 35px;
         @include flex(flex-end);
-        & ul{
+        & ul.menu-header-top{
             width: 38%;
             @include flex(space-around, center);
             & li{
@@ -41,7 +41,7 @@ header{
             // debug
             padding-bottom: 1%;
         }
-        & ul{
+        & ul.menu-nav{
             width: 90%;
             height: 100%;
             padding-left: 2%;
@@ -50,7 +50,6 @@ header{
                 flex-basis: calc(100% / 8 - 10px);
                 height: 100%;
                 padding-right: 10px;
-                border: 1px solid white;
                 @include flex(center);
                 a{
                     text-transform: capitalize;
@@ -64,6 +63,32 @@ header{
                     }
                 }
                 
+            }
+            & li.parent-dropdown{
+                position: relative;
+                & i{
+                    color: $grey;
+                }
+                & ul.with-dropdown{
+                    @include flex-c(flex-start, flex-start);
+                    padding: 10px;
+                    width: 200px;
+                    position: absolute;
+                    background-color: red;
+                    top: 55px;
+                    left: 0;
+                    display: none;
+                    & li{
+                        @include flex(flex-start);
+                        width: 100%;
+                        padding: 10px 0;
+
+                    }
+                }
+
+                &:hover ul.with-dropdown{
+                    display: block;
+                }
             }
         }
 
