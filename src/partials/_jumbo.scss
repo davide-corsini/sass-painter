@@ -18,8 +18,7 @@
             }
             & .btns{
                 @include flex(space-between);
-                background-color: orange;
-                width: 50%;
+                width: 80%;
             }
             & div.purple{
                 line-height: 1.5;

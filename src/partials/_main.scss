@@ -4,7 +4,6 @@ main{
     
     & h2{
         text-align: center;
-        padding-top: 3%;
     }
     & #software{
         width: 100%;
@@ -31,15 +30,9 @@ main{
             & img{
                 width: 100%;
             }
-
-
-
             & a{
                 color: $link;
             }
-        }
-        & li:nth-child(2){
-            margin: 0 20px;
         }
     }
 

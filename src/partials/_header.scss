@@ -17,7 +17,7 @@ header{
             @include flex(space-around, center);
             & li{
                 & span i{
-                    margin-right: 10px;
+                    
                     color: $link;
                 }
                 & a{
@@ -37,7 +37,6 @@ header{
         @include flex(flex-start, center);
         & .logo{
             width: 10%;
-            padding-bottom: 1%;
         }
         & ul.menu-nav{
             width: 90%;

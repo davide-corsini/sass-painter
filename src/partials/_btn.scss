@@ -1,13 +1,27 @@
-// .btn{
-//     color: red;
-//     @include pippo( 10%, green,);
-// }
-// @mixin pippo($pd, $bcg, $color, $font){
-//     @include flex(center, center);
-//     border: 0;
-//     background-color: $bcg;
-//     font-size: $font;
-//     padding: $pd;
-//     color: $color;
-//     text-transform: uppercase;
-// }
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+        background:darken($bg,8%);
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background:darken($bg,25%);
+    } 
+}
+
+.btn {
+    color:white;
+    text-decoration:none;
+    font-size: 1rem;
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+
+.btn-black{
+    @include button-bg($black);
+}
+
+.btn-transparent {
+    @include button-bg($transparent);
+    color: black;
+}

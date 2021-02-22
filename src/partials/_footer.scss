@@ -1,20 +1,69 @@
 footer{
     width: 100%;
-    background: red;
+    background: $bcg_main;
     & .container{
+        
         & ul.menu-foot-top{
             width: 100%;
-            height: 100%;
-            @include flex();
+            @include flex(flex-start,flex-start);
             & li{
                 flex-basis: calc(100% / 4 - 20px);
                 padding: 0 10px;
+                & ul{
+                    @include flex-c(flex-start, flex-start);
+                    & li{
+                        line-height: 1.6;
+                        
+                    }
+                } 
+            }
+        }
+
+        & ul.social{
+            width: 100%;
+            height: 30px;
+            @include flex(flex-end);
+            & li{
+                padding: 0 10px;
+                & a i{
+                    font-size: 1.5rem;
+                }
             }
         }
     }
     & .foot-bottom{
         height: 100px;
-        background: $black;
+        background: $bcg_foot_bottom;
+        & .container{
+            height: 100%;
+            @include flex(space-between);
+            & .sponsored{
+                width: 30%;
+                height: 100%;
+                & ul{
+                    @include flex(space-around);
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+            & .copy{
+                width: 50%;
+                height: 100%;
+                & ul{
+                    @include flex(space-around);
+                    width: 100%;
+                    height: 100%;
+                    color: $grey;
+                    & li:hover{
+                        cursor: pointer;
+                        color: $white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
 
     }
 }
