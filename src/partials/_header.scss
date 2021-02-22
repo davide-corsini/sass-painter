@@ -1,4 +1,4 @@
-$height_header: 80px;
+$height_header: 90px;
 
 header{
     height: $height_header;
@@ -10,19 +10,26 @@ header{
         // background-color: red;
         // debug
         width: 100%;
-        height: 25px;
+        height: 35px;
         @include flex(flex-end);
         & ul{
             width: 38%;
             @include flex(space-around, center);
-            // debug
-            // background-color: lightgrey;
+            & li{
+                & span i{
+                    margin-right: 10px;
+                    color: $link;
+                }
+                & a{
+                    color: $grey;
+                }
+            }
         }
     }
 
     .nav-bar{
         width: 100%;
-        height: calc(#{$height_header} - 25px);
+        height: calc(#{$height_header} - 35px);
         // debug
         // debug
         @include flex(flex-start, center);
@@ -42,11 +49,19 @@ header{
             & li{
                 flex-basis: calc(100% / 8 - 10px);
                 height: 100%;
-                padding-right: 20px;
+                padding-right: 10px;
                 border: 1px solid white;
                 @include flex(center);
                 a{
                     text-transform: capitalize;
+                    color: $white;
+                }
+                &:hover{
+                    background: $white;
+                    cursor: pointer;
+                    a{
+                        color: $black;
+                    }
                 }
                 
             }
@@ -55,23 +70,8 @@ header{
 
     }
 }
-#jumbo{
-    width: 100%;
-    height: 480px;
-    background-image: url('../img/bg-painter-home.jpg');
-    background-size: cover;
-    object-fit: cover;
+
     // debug
-    .container{
-        height: 100%;
-        @include flex-c(center, flex-start);
-        & .title-jumbo{
-            width: 40%;
-        }
-    }
-    // debug
-    & img{
-        width: 100%;
-    }
+
+
     
-}

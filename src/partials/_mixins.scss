@@ -1,6 +1,6 @@
 @mixin cont {
         .container{
-        max-width: 90%;
+        max-width: 85%;
         margin: 0 auto;
     }
 }
@@ -17,4 +17,14 @@
     flex-direction: column;
     justify-content: $just;
     align-items: $align;
+}
+
+@mixin btn($pd, $bcg, $color, $font){
+    @include flex(center, center);
+    border: 0;
+    background-color: $bcg;
+    font-size: $font;
+    padding: $pd;
+    color: $color;
+    text-transform: uppercase;
 }

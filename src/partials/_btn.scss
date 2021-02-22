@@ -1,0 +1,13 @@
+// .btn{
+//     color: red;
+//     @include pippo( 10%, green,);
+// }
+// @mixin pippo($pd, $bcg, $color, $font){
+//     @include flex(center, center);
+//     border: 0;
+//     background-color: $bcg;
+//     font-size: $font;
+//     padding: $pd;
+//     color: $color;
+//     text-transform: uppercase;
+// }
