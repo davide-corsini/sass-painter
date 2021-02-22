@@ -1,0 +1,66 @@
+$height_header: 90px;
+
+header{
+    height: $height_header;
+    background-color: $bcg_header;
+    @include cont;
+    
+    .header-top{
+        // debug
+        background-color: red;
+        // debug
+        width: 100%;
+        height: 25px;
+        @include flex(flex-end);
+        & ul{
+            width: 38%;
+            @include flex(space-around, center);
+            // debug
+            background-color: lightgrey;
+        }
+    }
+
+    .nav-bar{
+        width: 100%;
+        height: calc(#{$height_header} - 25px);
+        // debug
+        background-color: orange;
+        // debug
+        @include flex(flex-start, flex-end);
+
+        //debug
+        padding-bottom: 1%;
+        //debug
+        & .logo{
+            width: 10%;
+            background-color: grey;
+            
+        }
+        & ul{
+            width: 90%;
+            height: 100%;
+            background-color: pink;
+            padding-left: 2%;
+            @include flex(flex-start, flex-end);
+            & li{
+                flex-basis: calc(100% / 8 - 10px);
+                height: 50%;
+                padding-right: 20px;
+                border: 1px solid black;
+                @include flex(center);
+                
+            }
+        }
+    }
+    // div{
+    //     @include flex-c;
+    //     height: 50px;
+    //     background-color: red;
+    //     .#{&}-top{
+    //         width: 100%;
+    //         height: 50%;
+    //         background-color: green;
+    //     }
+    // }
+    
+}

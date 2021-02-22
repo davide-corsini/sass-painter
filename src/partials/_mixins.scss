@@ -1,0 +1,20 @@
+@mixin cont {
+        .container{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+@mixin flex($just:flex-start, $align:center) {
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin flex-c($just:center, $align:center){
+    display: flex;
+    flex-direction: column;
+    justify-content: $just;
+    align-items: $align;
+}
