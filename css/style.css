@@ -846,7 +846,7 @@ footer .container ul.menu-foot-top li ul li {
   line-height: 1.6;
   color: #333333;
 }
-footer .container ul.menu-foot-top li ul li:hover {
+footer .container ul.menu-foot-top li ul li:hover:not(:first-child) {
   color: black;
   text-decoration: underline;
   cursor: pointer;

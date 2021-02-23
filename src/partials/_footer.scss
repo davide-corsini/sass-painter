@@ -14,7 +14,7 @@ footer{
                     & li{
                         line-height: 1.6;
                         color: $black_main;
-                        &:hover{
+                        &:hover:not(:first-child){
                             color: darken($black_main, 20%);
                             text-decoration: underline;
                             cursor: pointer;
