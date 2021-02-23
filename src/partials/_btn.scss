@@ -23,5 +23,11 @@
 
 .btn-transparent {
     @include button-bg($transparent);
-    color: black;
+    color: $black;
+}
+
+.btn-white{
+    @include button-bg($white);
+    color: $black_main;
+    border: 0;
 }

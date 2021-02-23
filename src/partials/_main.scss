@@ -38,7 +38,6 @@ main{
 
     & section#offert{
         width: 100%;
-        height: 800px;
         
         & .container{
             background-color: cornflowerblue;
@@ -46,13 +45,23 @@ main{
             & ul.menu-offert{
                 width: 100%;
                 height: 100%;
-                display: flex;
+                @include flex(flex-start, flex);
                 flex-wrap: wrap;
+                color: $white;
                 & li{
+                    height: 325px;
                     width: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex-c(space-around, flex-start);
+                    & h2{
+                        font-size: 28px;
+                        line-height: 1.2;
+                        font-weight: 400;
+                    }
+                    & p{
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 1.6;
+                    }
                 }
                 & li:nth-child(1){
                     background-color: $violet;
