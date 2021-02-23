@@ -1,11 +1,3 @@
-// container
-@mixin cont {
-        .container{
-        max-width: 85%;
-        margin: 0 auto;
-    }
-}
-
 //flex
 @mixin flex($just:flex-start, $align:center) {
     display: flex;

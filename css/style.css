@@ -485,6 +485,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
 body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -496,11 +501,6 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-.container {
-  max-width: 85%;
-  margin: 0 auto;
 }
 
 .btn {
